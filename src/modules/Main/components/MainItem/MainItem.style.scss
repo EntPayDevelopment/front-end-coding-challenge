@@ -1,0 +1,36 @@
+.main-item-card {
+  width: calc((100% - 64px) / 5);
+  background: #fff;
+
+  .main-item-content {
+    display: flex;
+    flex-direction: column;
+    padding: 7px 12px;
+    height: 380px;
+
+    .card-image-wrapper {
+      img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+      }
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    button {
+      margin: auto 0 8px;
+      width: 100%;
+      height: 30px;
+      border: 0;
+      padding: 0;
+      text-align: center;
+      color: #fff;
+      background: #333;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  }
+}

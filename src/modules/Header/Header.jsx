@@ -1,6 +1,5 @@
 import React from "react";
-
-const CRAVE_LOGO = process.env.PUBLIC_URL + "/logo/crave.svg";
+import CRAVE_LOGO from "@logo/crave.svg";
 
 export const Header = () => (
   <header>
