@@ -1,5 +1,5 @@
 import React from "react";
-import CRAVE_LOGO from "../../../public/logo/crave.svg";
+import CRAVE_LOGO from "media-log/crave.svg";
 
 export const Header = () => (
   <header>
