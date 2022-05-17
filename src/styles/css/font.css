@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'op-extrabold';
+  src: url('../font/OpenSans-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'op-bold';
+  src: url('../font/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'op-semibold';
+  src: url('../font/OpenSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'op-regular';
+  src: url('../font/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'op-light';
+  src: url('../font/OpenSans-Light.ttf');
+}
