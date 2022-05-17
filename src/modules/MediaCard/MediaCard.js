@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {addToWatchlist, removeFromWatchlist} from "media-api";
 import WatchListContext from "../../context";
 import './styles.css';
@@ -6,12 +6,17 @@ import './styles.css';
 export const MediaCard = ({media}) => {
     const [isAdded, setIsAdded] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
-    const {addCard, removeCard} = useContext(WatchListContext)
+    const {watchList, addCard, removeCard} = useContext(WatchListContext)
+
+    const checkWatchList = () => {
+        setIsAdded(watchList.includes(media))
+    }
+    useEffect(checkWatchList, [watchList])
 
     const addCardHandler = async () => {
         setIsClicked(true)
         await addToWatchlist(media.id).then((res) => {
-            setIsAdded(!isAdded)
+            // setIsAdded(!isAdded)
             addCard(media)
             setIsClicked(false)
             console.log(res.message)
@@ -22,17 +27,19 @@ export const MediaCard = ({media}) => {
             }
         })
     }
+
     const removeCardHandler = async () => {
         setIsClicked(true)
         await removeFromWatchlist(media.id).then(() => {
             removeCard(media)
-            setIsAdded(!isAdded)
+            // setIsAdded(!isAdded)
             setIsClicked(false)
         }).catch(error => {
             console.log(error)
             setIsClicked(false)
         })
     }
+
     return (
         <div className="mediaCard">
             <img className="image" src={media.image} alt="media image"/>
