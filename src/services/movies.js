@@ -1,3 +1,3 @@
-import { addToWatchlist, getMedias, removeFromWatchlist } from '../../api';
+import { addToWatchlist, getMedias, removeFromWatchlist } from "../../api";
 
 export { addToWatchlist, getMedias, removeFromWatchlist };

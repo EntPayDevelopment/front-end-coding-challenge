@@ -1,9 +1,9 @@
-import actions from '../actions';
+import actions from "../actions";
 const { watchListActions } = actions;
 
 const initialState = {
   loader: false,
-  data: []
+  data: [],
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -11,34 +11,34 @@ export default function rootReducer(state = initialState, action) {
     case watchListActions.GET_WATCHLIST_MOVIES:
       return {
         ...state,
-        loader: true
+        loader: true,
       };
     case watchListActions.GET_WATCHLIST_MOVIES_SUCCESS:
       return {
         ...state,
         data: action.data || [],
-        loader: false
+        loader: false,
       };
     case watchListActions.GET_WATCHLIST_MOVIES_FAILURE:
       return {
         ...state,
         data: [],
-        loader: false
+        loader: false,
       };
     case watchListActions.ADD_WATCHLIST_MOVIE:
       return {
         ...state,
-        loader: true
+        loader: true,
       };
     case watchListActions.ADD_WATCHLIST_MOVIE_SUCCESS:
       return {
         ...state,
-        loader: false
+        loader: false,
       };
     case watchListActions.ADD_WATCHLIST_MOVIE_FAILURE:
       return {
         ...state,
-        loader: false
+        loader: false,
       };
     default:
       return state;
