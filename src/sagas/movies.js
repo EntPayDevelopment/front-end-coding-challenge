@@ -34,7 +34,7 @@ export function* getMovieRequest() {
       toast.error(error.message || error.response.data.message);
       console.log(error);
       yield put({
-        type: movieActions.GET_MOVIES_SUCCESS,
+        type: movieActions.GET_MOVIES_FAILURE,
       });
     }
   });
