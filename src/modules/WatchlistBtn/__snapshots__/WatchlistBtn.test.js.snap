@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Given] An id [Then] it will render 1`] = `
+<button
+  className="Btn Add"
+  data-testid="WatchlistButton"
+  onClick={[Function]}
+>
+  (+) Add to Watchlist
+</button>
+`;

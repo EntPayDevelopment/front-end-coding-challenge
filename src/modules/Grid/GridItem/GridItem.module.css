@@ -1,0 +1,20 @@
+.GridItem {
+    border: 1px solid #CCCCCC;
+    margin: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    padding: 5px; 
+    width: 193px; 
+    align-content: center; 
+    justify-content: space-between;
+}
+.Title{
+    padding: 5px; 
+    margin: 5px; 
+    overflow: clip; 
+    height: 30px;
+}
+.Poster{
+    width: 183px;
+}

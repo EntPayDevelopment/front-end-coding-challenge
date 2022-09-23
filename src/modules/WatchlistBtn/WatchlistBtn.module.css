@@ -1,0 +1,15 @@
+.Btn {
+    color: white;
+    border: none;
+    width: 150px;
+    padding: 8px 20px 8px 20px;
+    margin: 10px 0 10px 0;
+}
+
+.Add {
+    background-color: rgb(0, 193, 243);
+}
+
+.Remove {
+    background-color: rgb(0, 103, 153);
+}
