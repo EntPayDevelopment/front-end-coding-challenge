@@ -1,0 +1,68 @@
+.movies__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2.2rem;
+}
+
+.MovieCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    transition: transform 0.4s;
+
+    .overlay {
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    color: #fff;
+    transition: 0.5s ease;
+    opacity: 0;
+    bottom: 50%;
+    font-size: .8rem;
+    padding: 1rem 0;
+    text-align: center;
+
+    &__icon {
+        font-size: 1rem;
+        color: #fff;
+    }
+}
+
+.card__image {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .movies__container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .movies__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 625px) {
+    .movies__container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
